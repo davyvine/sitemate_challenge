@@ -11,16 +11,15 @@ app.use(express.json({ limit: "200mb" }));
 
 // CORS OPTION
 const CORS_OPTION = {
-   credentials: true,
-   origin: ["http://localhost:5003", "http://127.0.0.1:5003"],
+   origin: ["http://localhost:3000", "http://127.0.0.1:3000"],
    optionsSuccessStatus: 200,
 };
 
+app.use(cors(CORS_OPTION));
+
 // DEFINE ROUTES
 app.route("/issues").get(issuesController.getAllIssuesHandler).post(issuesController.postIssueHandler);
-app.route("/issues/:id").patch(issuesController.updateIssueHandler).post(issuesController.postIssueHandler);
-
-app.use(cors(CORS_OPTION));
+app.route("/issues/:id").patch(issuesController.updateIssueHandler).delete(issuesController.deleteIssueHandler);
 
 // SERVER
 let httpServer = http.createServer(app);

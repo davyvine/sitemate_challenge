@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "8a3521f0-848c-4535-a06e-3dec780f56af",
+		"name": "issues API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11905378",
+		"_collection_link": "https://solar-rocket-350047.postman.co/workspace/sitemate_challenge~6450a5f7-c9eb-4d8e-acda-073e5349f770/collection/11905378-8a3521f0-848c-4535-a06e-3dec780f56af?action=share&source=collection_link&creator=11905378"
+	},
+	"item": [
+		{
+			"name": "GET Issues",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5003/issues",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"issues"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Issues",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"test123\",\n    \"description\": \"test123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5003/issues",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"issues"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Issue",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"test123\",\n    \"description\": \"test123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5003/issues/651aecfd174ef814be14fc0e",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"issues",
+						"651aecfd174ef814be14fc0e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Issue",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"test123\",\n    \"description\": \"test123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5003/issues/651ad9485ae9385bd9f2d376",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"issues",
+						"651ad9485ae9385bd9f2d376"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

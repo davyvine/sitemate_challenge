@@ -2,7 +2,6 @@ const { IssuesModel } = require("../models/IssuesModel");
 
 // CREATE
 module.exports.postIssueHandler = async (req, res) => {
-   console.log(req);
    let response = await IssuesModel.create({ title: req.body.title, description: req.body.description });
    res.status(201).json(response).end();
 };

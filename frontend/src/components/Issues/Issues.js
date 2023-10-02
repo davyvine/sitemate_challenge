@@ -10,7 +10,7 @@ const Issues = () => {
 
    const submitHandler = async () => {
       try {
-         let resp = await axios.create({ baseURL: `http://localhost:5003` }).post(`/issues`, input);
+         let resp = await axios.create({ baseURL: `https://localhost:5003` }).post(`/issues`, input);
          console.log(resp.data);
       } catch (e) {
          console.log(e);
